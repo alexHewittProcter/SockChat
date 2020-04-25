@@ -1,0 +1,18 @@
+{
+	"name": "server_e2e",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"start": "mocha \"src/**/*.test.js\""
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"chai": "^4.2.0",
+		"mocha": "^7.1.1",
+		"socket.io": "^2.3.0",
+		"supertest": "^4.0.2"
+	}
+}

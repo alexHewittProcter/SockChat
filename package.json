@@ -1,20 +1,21 @@
 {
-  "name": "SockChat",
-  "version": "1.0.0",
-  "description": "A chat application utilising WebSockets in Node.js and Redis",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/alexHewittProcter/SockChat.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/alexHewittProcter/SockChat/issues"
-  },
-  "homepage": "https://github.com/alexHewittProcter/SockChat#readme"
+	"name": "SockChat",
+	"version": "1.0.0",
+	"description": "A chat application utilising WebSockets in Node.js and Redis",
+	"scripts": {
+		"server": "docker-compose -f docker-compose.server.base.yml up",
+		"test:server": "docker-compose -f docker-compose.server.base.yml -f docker-compose.server.test.yml up",
+		"e2e:server": "docker-compose -f docker-compose.server.base.yml -f docker-compose.server.e2e.yml up --abort-on-container-exit"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/alexHewittProcter/SockChat.git"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/alexHewittProcter/SockChat/issues"
+	},
+	"homepage": "https://github.com/alexHewittProcter/SockChat#readme"
 }

@@ -1,0 +1,9 @@
+version: "3"
+services:
+    server_e2e:
+        network_mode: host
+        build:
+            context: ./server_e2e
+            dockerfile: ../base.node.Dockerfile
+        volumes: 
+            - ./server_e2e/src:/app/src
