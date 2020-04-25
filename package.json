@@ -4,6 +4,7 @@
 	"description": "A chat application utilising WebSockets in Node.js and Redis",
 	"scripts": {
 		"server": "docker-compose -f docker-compose.server.base.yml up",
+		"server:detach": "npm run server -- -d",
 		"test:server": "docker-compose -f docker-compose.server.base.yml -f docker-compose.server.test.yml up",
 		"e2e:server": "docker-compose -f docker-compose.server.base.yml -f docker-compose.server.e2e.yml up --abort-on-container-exit"
 	},
