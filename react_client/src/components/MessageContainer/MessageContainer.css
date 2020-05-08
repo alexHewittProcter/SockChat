@@ -1,0 +1,32 @@
+.message-input-bar > .input-group > *,
+.message-input-bar > .input-group > * > .btn {
+  border-radius: 0;
+}
+
+.message-list-wrapper {
+  height: calc(100% - 38px);
+  position: relative;
+}
+
+#message-list {
+  margin: 0;
+  padding: 0;
+  max-height: 100%;
+  padding-bottom: 5px;
+  overflow: auto;
+}
+
+.message {
+  text-align: left;
+  padding: 5px 20px;
+}
+
+.message:nth-child(even) {
+  background-color: lightgray;
+}
+
+.message-container {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}

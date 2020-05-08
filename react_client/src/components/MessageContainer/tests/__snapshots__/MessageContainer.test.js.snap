@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MessageContainer should render component 1`] = `
+<div
+  className="message-container"
+>
+  <MessageListComponent
+    messages={Array []}
+  />
+  <MessageInputBar
+    messageSend={[Function]}
+  />
+</div>
+`;
