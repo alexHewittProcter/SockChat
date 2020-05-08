@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MessageInputBar should render correctly 1`] = `
+<div
+  className="message-input-bar"
+>
+  <InputGroup>
+    <div
+      className="input-group"
+    >
+      <FormControl
+        name="message"
+        onChange={[Function]}
+        onKeyDown={[Function]}
+        placeholder="Message..."
+        value=""
+      >
+        <input
+          className="form-control"
+          name="message"
+          onChange={[Function]}
+          onKeyDown={[Function]}
+          placeholder="Message..."
+          value=""
+        />
+      </FormControl>
+      <InputGroupAppend>
+        <div
+          className="input-group-append"
+        >
+          <Button
+            active={false}
+            disabled={false}
+            onClick={[Function]}
+            type="button"
+            variant="primary"
+          >
+            <button
+              className="btn btn-primary"
+              disabled={false}
+              onClick={[Function]}
+              type="button"
+            >
+              Send
+            </button>
+          </Button>
+        </div>
+      </InputGroupAppend>
+    </div>
+  </InputGroup>
+</div>
+`;
