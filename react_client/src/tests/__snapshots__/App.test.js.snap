@@ -1,67 +1,35 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`App Should render 1`] = `
-<div
-  className="App"
+<ContextProvider
+  value={
+    Object {
+      "store": Object {
+        "dispatch": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+        Symbol(observable): [Function],
+      },
+      "subscription": Subscription {
+        "handleChangeWrapper": [Function],
+        "listeners": Object {
+          "notify": [Function],
+        },
+        "onStateChange": [Function],
+        "parentSub": undefined,
+        "store": Object {
+          "dispatch": [Function],
+          "getState": [Function],
+          "replaceReducer": [Function],
+          "subscribe": [Function],
+          Symbol(observable): [Function],
+        },
+        "unsubscribe": null,
+      },
+    }
+  }
 >
-  <div
-    className="message-container"
-  >
-    <div
-      className="message-list-wrapper"
-    >
-      <ul
-        id="message-list"
-      />
-    </div>
-    <div
-      className="message-input-bar"
-    >
-      <InputGroup>
-        <div
-          className="input-group"
-        >
-          <FormControl
-            name="message"
-            onChange={[Function]}
-            onKeyDown={[Function]}
-            placeholder="Message..."
-            value=""
-          >
-            <input
-              className="form-control"
-              name="message"
-              onChange={[Function]}
-              onKeyDown={[Function]}
-              placeholder="Message..."
-              value=""
-            />
-          </FormControl>
-          <InputGroupAppend>
-            <div
-              className="input-group-append"
-            >
-              <Button
-                active={false}
-                disabled={false}
-                onClick={[Function]}
-                type="button"
-                variant="primary"
-              >
-                <button
-                  className="btn btn-primary"
-                  disabled={false}
-                  onClick={[Function]}
-                  type="button"
-                >
-                  Send
-                </button>
-              </Button>
-            </div>
-          </InputGroupAppend>
-        </div>
-      </InputGroup>
-    </div>
-  </div>
-</div>
+  <App />
+</ContextProvider>
 `;

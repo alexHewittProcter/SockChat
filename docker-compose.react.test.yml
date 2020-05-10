@@ -1,0 +1,4 @@
+version: '3'
+services:
+  react_client:
+    command: 'npm run test'
