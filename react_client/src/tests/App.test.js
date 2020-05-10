@@ -1,11 +1,18 @@
 import React from 'react';
 import App from '../App';
-import { mount } from 'enzyme';
+import { shallow } from 'enzyme';
+import { Provider } from 'react-redux';
+import { createStore } from 'redux';
+import appReducer from '../store/reducers';
 
 describe('App', () => {
   let app;
   beforeEach(() => {
-    app = mount(<App />);
+    app = shallow(
+      <Provider store={createStore(appReducer)}>
+        <App />
+      </Provider>
+    );
   });
   afterEach(() => {
     app.unmount();

@@ -1,12 +1,12 @@
-version: "3"
+version: '3'
 services:
-    server:
-        build:
-            context: ./server
-            dockerfile: ../base.node.Dockerfile
-        volumes: 
-            - ./server/src:/app/src
-        expose: 
-            - "4000"
-        ports: 
-            - "4000:4000"
+  server:
+    build:
+      context: ./server
+      dockerfile: ../base.node.Dockerfile
+    volumes:
+      - ./server/src:/app/src
+    expose:
+      - '4000'
+    ports:
+      - '4000:4000'

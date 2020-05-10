@@ -1,22 +1,25 @@
 {
-	"name": "SockChat",
-	"version": "1.0.0",
-	"description": "A chat application utilising WebSockets in Node.js and Redis",
-	"scripts": {
-		"server": "docker-compose -f docker-compose.server.base.yml up",
-		"server:detach": "npm run server -- -d",
-		"test:server": "docker-compose -f docker-compose.server.base.yml -f docker-compose.server.test.yml up",
-		"e2e:server": "docker-compose -f docker-compose.server.base.yml -f docker-compose.server.e2e.yml up --abort-on-container-exit"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/alexHewittProcter/SockChat.git"
-	},
-	"keywords": [],
-	"author": "",
-	"license": "ISC",
-	"bugs": {
-		"url": "https://github.com/alexHewittProcter/SockChat/issues"
-	},
-	"homepage": "https://github.com/alexHewittProcter/SockChat#readme"
+  "name": "SockChat",
+  "version": "1.0.0",
+  "description": "A chat application utilising WebSockets in Node.js and Redis",
+  "scripts": {
+    "cluster": "docker-compose -f docker-compose.server.base.yml -f docker-compose.react.base.yml up",
+    "react": "docker-compose -f docker-compose.react.base.yml up",
+    "test:react": "docker-compose -f docker-compose.react.base.yml -f docker-compose.react.test.yml up",
+    "server": "docker-compose -f docker-compose.server.base.yml up",
+    "server:detach": "npm run server -- -d",
+    "test:server": "docker-compose -f docker-compose.server.base.yml -f docker-compose.server.test.yml up",
+    "e2e:server": "docker-compose -f docker-compose.server.base.yml -f docker-compose.server.e2e.yml up --abort-on-container-exit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexHewittProcter/SockChat.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alexHewittProcter/SockChat/issues"
+  },
+  "homepage": "https://github.com/alexHewittProcter/SockChat#readme"
 }
