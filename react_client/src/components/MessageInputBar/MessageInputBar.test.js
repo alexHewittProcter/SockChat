@@ -1,6 +1,6 @@
 import React from 'react';
 import { mount } from 'enzyme';
-import MessageInputBar from '../MessageInputBar';
+import MessageInputBar from './MessageInputBar';
 
 describe('MessageInputBar', () => {
   let messageInputBar;

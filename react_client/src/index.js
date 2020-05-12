@@ -3,11 +3,22 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import { createStore } from 'redux';
+import { createStore, applyMiddleware, compose } from 'redux';
 import { Provider } from 'react-redux';
+import createSagaMiddleware from 'redux-saga';
 import appReducer from './store/reducers';
+import { rootMessageSaga } from './store/sagas/messages';
+import { SocketService } from './services';
 
-const store = createStore(appReducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
+const sagaMiddleWare = createSagaMiddleware();
+
+const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+
+const store = createStore(appReducer, composeEnhancer(applyMiddleware(sagaMiddleWare)));
+
+const socket = new SocketService(store.dispatch).createClientConnection();
+
+sagaMiddleWare.run(rootMessageSaga, { socket });
 
 ReactDOM.render(
   <Provider store={store}>
