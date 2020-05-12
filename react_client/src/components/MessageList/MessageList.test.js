@@ -1,5 +1,5 @@
 import React from 'react';
-import MessageListComponent from '../MessageList';
+import MessageListComponent from './MessageList';
 import { mount } from 'enzyme';
 describe('MessageListComponent', () => {
   let messageListComponent;
