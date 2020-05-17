@@ -25,11 +25,13 @@ describe('SocketService', () => {
     dispatchSpy = jest.fn();
     socketService = new SocketService(dispatchSpy);
   });
+
   describe('createClientConnection method', () => {
     let socket;
     beforeEach(() => {
       socket = socketService.createClientConnection();
     });
+
     it('should create and return a Socket.I.O client when createClientConnection is called', () => {
       expect(socket).toBeDefined();
       expect(io).toHaveBeenCalled();
