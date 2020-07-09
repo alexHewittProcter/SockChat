@@ -1,0 +1,19 @@
+.list-wrapper {
+  background-color: white;
+  height: calc(100% - 38px);
+  position: relative;
+}
+
+.message-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.message {
+  padding: 5px;
+}
+
+.message:nth-child(odd) {
+  background-color: gray;
+}
