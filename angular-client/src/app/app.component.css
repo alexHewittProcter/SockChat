@@ -1,0 +1,11 @@
+app-message-container {
+  position: absolute;
+  background-color: red;
+  height: 100%;
+}
+::ng-deep .list-wrapper {
+  display: block;
+  background-color: chartreuse;
+  height: 90%;
+  position: relative;
+}
