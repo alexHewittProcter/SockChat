@@ -25,4 +25,8 @@ describe('MessageListComponent', () => {
     expect(list.childAt(1).text()).toEqual(props.messages[1]);
     expect(messageListComponent).toMatchSnapshot();
   });
+  describe('lifecycles',()=>{
+    describe('ComponentDidMount',()=>{})
+    describe('')
+  })
 });

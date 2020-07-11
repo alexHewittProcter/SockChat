@@ -1,8 +1,8 @@
 import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
-import { getMessages } from '../store/selectors';
-import { AddMessagesAction } from '../store/actions';
+import { getMessages } from '../../core/store/selectors';
+import { SendMessageAction } from '../../core/store/actions';
 
 @Component({
   selector: 'app-message-container',
@@ -20,6 +20,6 @@ export class MessageContainerComponent implements OnInit {
   ngOnInit() {}
 
   sendMessage(message: string) {
-    this.store.dispatch(new AddMessagesAction({ messages: [message] }));
+    this.store.dispatch(new SendMessageAction(message));
   }
 }
