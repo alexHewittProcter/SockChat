@@ -4,7 +4,7 @@ import { SocketService } from './socket.service';
 import { Subject } from 'rxjs';
 import { Store } from '@ngrx/store';
 import { Socket } from 'ngx-socket-io';
-import { AddMessagesAction } from '../store/actions';
+import { AddMessageAction } from '../store/actions';
 
 describe('SocketService', () => {
   let dispatchSpy: jasmine.Spy;
@@ -67,11 +67,11 @@ describe('SocketService', () => {
     });
   });
   describe('listening to events from socket', () => {
-    it('should dispatch an `AddMessagesAction` when a `chat message` is received', () => {
+    it('should dispatch an `AddMessageAction` when a `chat message` is received', () => {
       const message = 'Test messages';
       fromEventSubject.next(message);
 
-      expect(dispatchSpy).toHaveBeenCalledWith(new AddMessagesAction({ messages: [message] }));
+      expect(dispatchSpy).toHaveBeenCalledWith(new AddMessageAction(message));
     });
   });
 });

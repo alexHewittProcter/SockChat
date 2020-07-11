@@ -1,11 +1,11 @@
 import { Action } from '@ngrx/store';
 
-export const ADD_MESSAGES = 'ADD_MESSAGES';
+export const ADD_MESSAGE = 'ADD_MESSAGE';
 export const SEND_MESSAGE = 'SEND_MESSAGE';
 
-export class AddMessagesAction implements Action {
-  readonly type = ADD_MESSAGES;
-  constructor(public payload: { messages: string[] }) {}
+export class AddMessageAction implements Action {
+  readonly type = ADD_MESSAGE;
+  constructor(public payload: string) {}
 }
 
 export class SendMessageAction implements Action {
@@ -13,4 +13,4 @@ export class SendMessageAction implements Action {
   constructor(public payload: string) {}
 }
 
-export type MessagesActions = AddMessagesAction;
+export type MessagesActions = AddMessageAction | SendMessageAction;

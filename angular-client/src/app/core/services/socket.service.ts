@@ -3,7 +3,7 @@ import { Store } from '@ngrx/store';
 import { Socket } from 'ngx-socket-io';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
-import { AddMessagesAction } from '../store/actions';
+import { AddMessageAction } from '../store/actions';
 
 @Injectable()
 export class SocketService implements OnDestroy {
@@ -23,7 +23,7 @@ export class SocketService implements OnDestroy {
       .fromEvent('chat message')
       .pipe(takeUntil(this.destroy$))
       .subscribe((msg: string) => {
-        this.store.dispatch(new AddMessagesAction({ messages: [msg] }));
+        this.store.dispatch(new AddMessageAction(msg));
       });
   }
 

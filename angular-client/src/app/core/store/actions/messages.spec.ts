@@ -1,12 +1,11 @@
-import { AddMessagesAction, ADD_MESSAGES } from '../actions';
-import { SendMessageAction, SEND_MESSAGE } from './messages';
+import { AddMessageAction, ADD_MESSAGE, SendMessageAction, SEND_MESSAGE } from '../actions';
 
 describe('Messages action', () => {
-  it('should create a `AddMessagesAction`', () => {
-    const payload = { messages: ['Hello, its ricky'] };
-    const action = new AddMessagesAction(payload);
+  it('should create a `AddMessageAction`', () => {
+    const payload = 'Hello, its ricky';
+    const action = new AddMessageAction(payload);
 
-    expect({ ...action }).toEqual({ type: ADD_MESSAGES, payload });
+    expect({ ...action }).toEqual({ type: ADD_MESSAGE, payload });
   });
 
   it('should create a `SendMessageAction`', () => {

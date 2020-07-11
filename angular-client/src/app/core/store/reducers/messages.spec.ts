@@ -1,5 +1,5 @@
 import { MessagesState, MessagesStateReducer } from './messages';
-import { AddMessagesAction } from '../actions';
+import { AddMessageAction } from '../actions';
 
 describe('message reducer', () => {
   let mockStartingData: MessagesState;
@@ -7,9 +7,9 @@ describe('message reducer', () => {
     mockStartingData = { messages: [] };
   });
 
-  it('should add messages on a `AddMessagesAction` action', () => {
+  it('should add messages on a `AddMessageAction` action', () => {
     const message = 'Hello there, general kenobi';
-    const action = new AddMessagesAction({ messages: [message] });
+    const action = new AddMessageAction(message);
 
     const returnState = MessagesStateReducer(mockStartingData, action);
 
