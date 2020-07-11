@@ -50,7 +50,7 @@ describe('MessageContainerComponent', () => {
   });
 
   describe('sendMessage method', () => {
-    it('should dispatch `AddMessagesAction` when called', () => {
+    it('should dispatch `AddMessageAction` when called', () => {
       const message = 'Test message';
       component.sendMessage(message);
       expect(dispatchSpy).toHaveBeenCalledWith(new SendMessageAction(message));

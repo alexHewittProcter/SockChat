@@ -32,7 +32,7 @@ describe('Messages Effects', () => {
   });
 
   describe('sendMessage$', () => {
-    it('should return AddMessagesAction when SendMessageAction is dispatched', () => {
+    it('should return AddMessageAction when SendMessageAction is dispatched', () => {
       const messageString = 'test message';
 
       const inputAction = new SendMessageAction(messageString);
