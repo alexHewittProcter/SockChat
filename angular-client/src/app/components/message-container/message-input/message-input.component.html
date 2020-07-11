@@ -1,6 +1,11 @@
 <form [formGroup]="messageForm">
   <div class="input-group">
-    <input class="form-control" placeholder="Type a message" formControlName="message" />
+    <input
+      class="form-control"
+      placeholder="Type a message"
+      formControlName="message"
+      id="form-input"
+    />
     <div class="input-group-append">
       <button class="btn btn-primary" (click)="sendMessage()">Send</button>
     </div>

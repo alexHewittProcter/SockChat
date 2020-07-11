@@ -2,12 +2,12 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { MessageContainerComponent } from './message-container.component';
 import { Store, StoreModule } from '@ngrx/store';
-import { getMessages } from '../store/selectors';
+import { getMessages } from '../../core/store/selectors';
 import { MessageInputComponent } from './message-input/message-input.component';
 import { MessageListComponent } from './message-list/message-list.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { AddMessagesAction } from '../store/actions';
-import { reducers, AppState } from '../store/reducers';
+import { SendMessageAction } from '../../core/store/actions';
+import { reducers, AppState } from '../../core/store/reducers';
 import { of } from 'rxjs';
 
 describe('MessageContainerComponent', () => {
@@ -53,7 +53,7 @@ describe('MessageContainerComponent', () => {
     it('should dispatch `AddMessagesAction` when called', () => {
       const message = 'Test message';
       component.sendMessage(message);
-      expect(dispatchSpy).toHaveBeenCalledWith(new AddMessagesAction({ messages: [message] }));
+      expect(dispatchSpy).toHaveBeenCalledWith(new SendMessageAction(message));
     });
   });
 });
